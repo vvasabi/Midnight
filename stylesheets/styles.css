@@ -699,7 +699,7 @@ dt {
   font-weight: normal;
 }
 
-#header {
+header {
   z-index: 100;
   left: 0;
   top: 0px;
@@ -712,13 +712,13 @@ dt {
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
-#header nav {
+header nav {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 10px;
   margin: 6px auto;
 }
-#header nav li {
+header nav li {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   list-style: none;
@@ -728,7 +728,7 @@ dt {
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
-#header nav li a {
+header nav li a {
   color: white;
   border: 1px solid #5d910b;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93bd20), color-stop(100%, #659e10));
@@ -752,7 +752,7 @@ dt {
   display: inline-block;
   text-align: center;
 }
-#header nav li a:hover {
+header nav li a:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527f0e));
   background: -webkit-linear-gradient(#749619, #527f0e);
   background: -moz-linear-gradient(#749619, #527f0e);
@@ -764,15 +764,15 @@ dt {
   -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
-#header nav li.fork {
+header nav li.fork {
   float: left;
   margin-left: 0px;
 }
-#header nav li.downloads {
+header nav li.downloads {
   float: right;
   margin-left: 6px;
 }
-#header nav li.title {
+header nav li.title {
   float: right;
   margin-right: 10px;
   font-size: 11px;
@@ -817,6 +817,48 @@ section #title .credits.right {
   float: right;
 }
 
+footer {
+  background: url("../images/hr.gif") center top repeat-x;
+  padding-top: 24px;
+}
+
+footer .credits {
+  font-size: 11px;
+  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #696969;
+  margin-top: -10px;
+}
+footer .credits.left {
+  float: left;
+}
+footer .credits.right {
+  float: right;
+}
+
+/* Clear fix (http://www.positioniseverything.net/easyclearing.html) */
+
+.clear-block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block {
+  height: 1%;
+}
+.clear-block {
+  display: block;
+}
+/* End hide from IE-mac */
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
@@ -838,19 +880,19 @@ section #title .credits.right {
     margin-top: 65px;
   }
 
-  #header {
+  header {
     position: absolute;
     height: auto;
   }
-  #header nav {
+  header nav {
     width: 100%;
     margin: 0px;
     padding: 0 4px;
   }
-  #header nav li.downloads, #header nav li.title {
+  header nav li.downloads, header nav li.title {
     display: none;
   }
-  #header nav li, #header nav li.fork, #header nav a, #header nav li.fork a {
+  header nav li, header nav li.fork, header nav a, header nav li.fork a {
     display: inline-block;
     float: none;
     margin: 0 auto;
